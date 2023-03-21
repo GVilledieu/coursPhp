@@ -1,5 +1,5 @@
 <?php
-require('form.php');
+require('class/form.php');
 $form=new form();
 ?>
 
@@ -40,7 +40,7 @@ $form=new form();
 </nav>
 <div class="container bg-secondary  pt-2 mt-4 pb-4">
     <div class="row">
-        <form action="result.php" method="get">
+        <form action="" method="get">
             <?php
             echo $form->Input("4","Votre email","email","email","Email");
             echo $form->Input("4","Votre mot de passe","password","password","Password");

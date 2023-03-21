@@ -1,5 +1,5 @@
 <?php
-      require('form.php');
+      require('class/form.php');
       $form=new form();
 ?>
 
@@ -40,7 +40,7 @@
             </nav>
             <div class="container bg-secondary  pt-2 mt-4 pb-4">
                   <div class="row">
-                        <form action="result.php" method="get">
+                        <form action="./back-end/index.php" method="post">
                                     <?php
                                     echo $form->Input("4","Votre nom","nom","text","Nom");
                                     echo $form->Input("4","Votre prénom","prénom","text","Prénom");
