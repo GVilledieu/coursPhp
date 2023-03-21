@@ -1,21 +1,7 @@
 <?php
-      function Input($size, $label, $nom, $type, $placeholder) {
-            $un =  '
-            <div class="col mt-'.$size.'">
-                     <label for="'.$label.'"class="form-label text-light"></label>
-                     </div>';
-
-            $deux= '';
-
-            $trois= '<input type="'.$type.'" name="'.$nom.'" class="form-control" id="'.$nom.'" placeholder="'.$placeholder.'"/></input>';
-
-            if($type != "submit"){
-                  $deux='<label for="'.$nom.'" class="form-label">'.$label.'</label>';
-            }
-
-            return $un.$deux.$trois;
-      }
-    ?>
+      require('form.php');
+      $form=new form();
+?>
 
 <!doctype html>
 <html lang="en">
@@ -36,13 +22,13 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                                <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Formulaire</a>
+                                <a class="nav-link" href="index.php">Inscription</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link disabled">Disabled</a>
+                                  <a class="nav-link" href="login.php">Connexion</a>
                             </li>
                         </ul>
                         <form class="d-flex" role="search">
@@ -56,13 +42,13 @@
                   <div class="row">
                         <form action="result.php" method="get">
                                     <?php
-                                    echo Input("4","Votre nom","nom","text","Nom");
-                                    echo Input("4","Votre prénom","prénom","text","Prénom");
-                                    echo Input("4","Votre email","email","email","Email");
-                                    echo Input("4","Votre téléphone","téléphone","tel","Téléphone");
-                                    echo Input("4","Votre mot de passe","password","password","Password");
-                                    echo Input("4","Votre mot de passe","password2","password","Password");
-                                    echo Input("4","submit","submit","submit","Submit");
+                                    echo $form->Input("4","Votre nom","nom","text","Nom");
+                                    echo $form->Input("4","Votre prénom","prénom","text","Prénom");
+                                    echo $form->Input("4","Votre email","email","email","Email");
+                                    echo $form->Input("4","Votre téléphone","téléphone","tel","Téléphone");
+                                    echo $form->Input("4","Votre mot de passe","password","password","Password");
+                                    echo $form->Input("4","Confirmer mot de passe","password2","password","Password");
+                                    echo $form->Input("4","submit","submit","submit","Submit");
                                     ?>
                         </form>
                   </div>
