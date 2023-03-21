@@ -39,7 +39,7 @@
                                 <a class="nav-link active" aria-current="page" href="#">Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Formulaire</a>
+                                <a class="nav-link" href="#">Inscription</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link disabled">Disabled</a>
@@ -61,7 +61,7 @@
                                     echo Input("4","Votre email","email","email","Email");
                                     echo Input("4","Votre téléphone","téléphone","tel","Téléphone");
                                     echo Input("4","Votre mot de passe","password","password","Password");
-                                    echo Input("4","Votre mot de passe","password2","password","Password");
+                                    echo Input("4","Confirmer mot de passe","password2","password","Password");
                                     echo Input("4","submit","submit","submit","Submit");
                                     ?>
                         </form>
