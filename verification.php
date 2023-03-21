@@ -8,9 +8,7 @@ class Verification
         if (strlen($name) < $min || strlen($_GET["nom"]) > $max){
             array_push($this->array, $message);
         }
-        else{
-            array_push($this->array, $name);
-        }
+        return $this->array;
     }
 
     public function getArray(){
@@ -19,8 +17,9 @@ class Verification
 
     public function getIndexError($index){
         if(count($this->array) > 0) {
-            return $this->array = $index;
+            return $this->array[$index];
         }
+        return null;
     }
 
     public function setArray($array){
